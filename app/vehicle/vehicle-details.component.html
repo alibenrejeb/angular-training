@@ -1,0 +1,37 @@
+<section *ngIf="vehicle">
+    <section>
+        <h2>You selected: {{vehicle.name}}</h2>
+        <h3>Description</h3>
+        <p>
+            {{vehicle.name}}<br>
+            model: {{vehicle.model}}<br>
+            passangers: {{vehicle.passengers}}<br>
+            Created: {{vehicle.created|date: 'dd/MM/yyyy'}}<br>
+        </p>
+    </section>
+    <section>
+        <form (ngSubmit)="saveVehicleDetails()" #vehicleForm="ngForm">
+            <div>
+                <label for="name">Name: </label>
+                <input type="text" name="name" required [(ngModel)]="vehicle.name" #name="ngModel">
+                <div [hidden]="name.valid || name.pristine" class="error">
+                    Name is required my good sir/lady!
+                </div>
+                <div>
+                    <label for="model">model: </label>
+                    <input type="text" name="model" [(ngModel)]="vehicle.model">
+                </div>
+                <div>
+                    <label for="passangers">passangers: </label>
+                    <input type="number" name="passangers" [(ngModel)]="vehicle.passengers">
+                </div>
+                <div>
+                    <label for="created">Created: </label>
+                    <input type="date" name="created" [(ngModel)]="vehicle.created">
+                </div>
+            </div>
+            <button type="submit" [disabled]="!vehicleForm.form.valid">Save</button>
+        </form>
+    </section>
+    <button (click)="goToVehiclesList()">Back to vehicles list</button>
+</section>

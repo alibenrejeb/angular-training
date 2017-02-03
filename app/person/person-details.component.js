@@ -42,15 +42,16 @@ var PersonDetailsComponent = (function () {
             console.log('success');
         });
     };
-    PersonDetailsComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'person-details',
-            templateUrl: 'person-details.component.html'
-        }), 
-        __metadata('design:paramtypes', [people_service_1.PeopleService, router_1.ActivatedRoute, router_1.Router])
-    ], PersonDetailsComponent);
     return PersonDetailsComponent;
 }());
+PersonDetailsComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'person-details',
+        templateUrl: 'person-details.component.html',
+        providers: [people_service_1.PeopleService]
+    }),
+    __metadata("design:paramtypes", [people_service_1.PeopleService, router_1.ActivatedRoute, router_1.Router])
+], PersonDetailsComponent);
 exports.PersonDetailsComponent = PersonDetailsComponent;
 //# sourceMappingURL=person-details.component.js.map

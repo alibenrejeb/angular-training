@@ -41,15 +41,16 @@ var VehicleDetailsComponent = (function () {
             console.log('success');
         });
     };
-    VehicleDetailsComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'vehicle-details',
-            templateUrl: 'vehicle-details.component.html',
-        }), 
-        __metadata('design:paramtypes', [vehicle_service_1.VehicleService, router_1.ActivatedRoute, router_1.Router])
-    ], VehicleDetailsComponent);
     return VehicleDetailsComponent;
 }());
+VehicleDetailsComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'vehicle-details',
+        templateUrl: 'vehicle-details.component.html',
+        providers: [vehicle_service_1.VehicleService]
+    }),
+    __metadata("design:paramtypes", [vehicle_service_1.VehicleService, router_1.ActivatedRoute, router_1.Router])
+], VehicleDetailsComponent);
 exports.VehicleDetailsComponent = VehicleDetailsComponent;
 //# sourceMappingURL=vehicle-details.component.js.map

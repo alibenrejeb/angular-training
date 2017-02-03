@@ -38,12 +38,12 @@ var VehicleService = (function () {
         headers.append('Accept', 'application/json');
         return headers;
     };
-    VehicleService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], VehicleService);
     return VehicleService;
 }());
+VehicleService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], VehicleService);
 exports.VehicleService = VehicleService;
 function mapVehicles(response) {
     return response.json().results.map(toVehicle);

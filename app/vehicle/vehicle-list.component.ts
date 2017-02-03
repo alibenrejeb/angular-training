@@ -5,6 +5,7 @@ import {VehicleService} from "./vehicle.service";
     moduleId: module.id,
     selector: 'vehicle-list',
     templateUrl: 'vehicle-list.component.html',
+    providers: [VehicleService]
 })
 
 export class VehicleListComponents implements OnInit {

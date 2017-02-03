@@ -8,7 +8,8 @@ import {PeopleService} from "./people.service";
 @Component({
     moduleId: module.id,
     selector: 'person-details',
-    templateUrl: 'person-details.component.html'
+    templateUrl: 'person-details.component.html',
+    providers: [PeopleService]
 })
 
 export class PersonDetailsComponent implements OnInit, OnDestroy {

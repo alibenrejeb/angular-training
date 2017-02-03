@@ -14,10 +14,10 @@ var Rx_1 = require("rxjs/Rx");
 var PeopleService = (function () {
     function PeopleService(http) {
         this.http = http;
-        this.endpoint_url = "http://localhost/Sf3VenteAchat/web/app_dev.php";
+        this.endpoint_url = "http://swapi.co/api";
     }
     PeopleService.prototype.getAll = function () {
-        return this.http.get(this.endpoint_url + "/produits", { headers: this.getHeaders() })
+        return this.http.get(this.endpoint_url + "/people", { headers: this.getHeaders() })
             .map(this.handleData)
             .catch(this.handleError);
     };
@@ -38,11 +38,11 @@ var PeopleService = (function () {
         headers.append('Accept', 'application/json');
         return headers;
     };
-    PeopleService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], PeopleService);
     return PeopleService;
 }());
+PeopleService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], PeopleService);
 exports.PeopleService = PeopleService;
 //# sourceMappingURL=people.service.js.map

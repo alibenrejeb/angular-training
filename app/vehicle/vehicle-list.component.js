@@ -22,15 +22,16 @@ var VehicleListComponents = (function () {
         this.vehicleService.getVehicles()
             .subscribe(function (v) { return _this.vehicles = v; }, function (e) { return _this.errorMessage = e; }, function () { return _this.isLoading = false; });
     };
-    VehicleListComponents = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'vehicle-list',
-            templateUrl: 'vehicle-list.component.html',
-        }), 
-        __metadata('design:paramtypes', [vehicle_service_1.VehicleService])
-    ], VehicleListComponents);
     return VehicleListComponents;
 }());
+VehicleListComponents = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'vehicle-list',
+        templateUrl: 'vehicle-list.component.html',
+        providers: [vehicle_service_1.VehicleService]
+    }),
+    __metadata("design:paramtypes", [vehicle_service_1.VehicleService])
+], VehicleListComponents);
 exports.VehicleListComponents = VehicleListComponents;
 //# sourceMappingURL=vehicle-list.component.js.map

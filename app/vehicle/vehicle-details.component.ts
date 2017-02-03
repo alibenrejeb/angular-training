@@ -8,6 +8,7 @@ import {Response} from "@angular/http";
     moduleId: module.id,
     selector: 'vehicle-details',
     templateUrl: 'vehicle-details.component.html',
+    providers: [VehicleService]
 })
 
 export class VehicleDetailsComponent implements OnInit, OnDestroy {

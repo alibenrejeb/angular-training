@@ -4,13 +4,13 @@ import {Observable} from "rxjs/Rx";
 
 @Injectable()
 export class PeopleService {
-    endpoint_url:String = "http://localhost/Sf3VenteAchat/web/app_dev.php";
+    endpoint_url:String = "http://swapi.co/api";
 
     constructor(private http:Http) {
     }
 
     getAll():Observable<any> {
-        return this.http.get(`${this.endpoint_url}/produits`, {headers: this.getHeaders()})
+        return this.http.get(`${this.endpoint_url}/people`, {headers: this.getHeaders()})
             .map(this.handleData)
             .catch(this.handleError);
     }

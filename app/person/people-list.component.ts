@@ -6,6 +6,7 @@ import {PeopleService} from './people.service';
     moduleId: module.id,
     selector: 'people-list',
     templateUrl: 'people-list.component.html',
+    providers: [PeopleService]
 })
 
 export class PeopleListComponent implements OnInit {

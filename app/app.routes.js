@@ -1,10 +1,11 @@
 "use strict";
-var router_1 = require('@angular/router');
+var router_1 = require("@angular/router");
 var people_list_component_1 = require("./person/people-list.component");
 var person_details_component_1 = require("./person/person-details.component");
 var vehicle_list_component_1 = require("./vehicle/vehicle-list.component");
 var vehicle_details_component_1 = require("./vehicle/vehicle-details.component");
-var get_peoples_component_1 = require("./component/get-peoples.component");
+var get_products_component_1 = require("./component/get-products.component");
+var product_details_component_1 = require("./component/product-details.component");
 // Route config let's you map routes to components
 var routes = [
     // map '/persons' to the people list component
@@ -27,12 +28,16 @@ var routes = [
         component: vehicle_details_component_1.VehicleDetailsComponent,
     },
     {
-        path: 'test',
-        component: get_peoples_component_1.GetPeopleComponent,
+        path: 'products',
+        component: get_products_component_1.GetProductsComponent,
+    },
+    {
+        path: 'product/:id',
+        component: product_details_component_1.ProductDetailsComponent
     },
     {
         path: '',
-        redirectTo: '/test',
+        redirectTo: '/persons',
         pathMatch: 'full'
     },
 ];

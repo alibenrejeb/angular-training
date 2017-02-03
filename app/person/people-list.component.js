@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var people_service_1 = require('./people.service');
+var people_service_1 = require("./people.service");
 var PeopleListComponent = (function () {
     function PeopleListComponent(peopleService) {
         this.peopleService = peopleService;
@@ -26,15 +26,16 @@ var PeopleListComponent = (function () {
         /* error path */ function (e) { return _this.errorMessage = e; }, 
         /* onComplete */ function () { return _this.isLoading = false; });
     };
-    PeopleListComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'people-list',
-            templateUrl: 'people-list.component.html',
-        }), 
-        __metadata('design:paramtypes', [people_service_1.PeopleService])
-    ], PeopleListComponent);
     return PeopleListComponent;
 }());
+PeopleListComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'people-list',
+        templateUrl: 'people-list.component.html',
+        providers: [people_service_1.PeopleService]
+    }),
+    __metadata("design:paramtypes", [people_service_1.PeopleService])
+], PeopleListComponent);
 exports.PeopleListComponent = PeopleListComponent;
 //# sourceMappingURL=people-list.component.js.map

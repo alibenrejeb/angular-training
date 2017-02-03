@@ -4,6 +4,8 @@ import {PersonDetailsComponent} from "./person/person-details.component";
 import {VehicleListComponents} from "./vehicle/vehicle-list.component";
 import {VehicleDetailsComponent} from "./vehicle/vehicle-details.component";
 import {GetPeopleComponent} from "./component/get-peoples.component";
+import {GetProductsComponent} from "./component/get-products.component";
+import {ProductDetailsComponent} from "./component/product-details.component";
 
 // Route config let's you map routes to components
 const routes:Routes = [
@@ -27,12 +29,16 @@ const routes:Routes = [
         component: VehicleDetailsComponent,
     },
     {
-        path: 'test',
-        component: GetPeopleComponent,
+        path: 'products',
+        component: GetProductsComponent,
+    },
+    {
+        path: 'product/:id',
+        component: ProductDetailsComponent
     },
     {
         path: '',
-        redirectTo: '/test',
+        redirectTo: '/persons',
         pathMatch: 'full'
     },
 ];

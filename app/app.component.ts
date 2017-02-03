@@ -8,8 +8,7 @@ import {VehicleService} from "./vehicle/vehicle.service";
     template: `
         <h1>{{title}}</h1>
         <router-outlet></router-outlet>
-    `,
-    providers: [PeopleService, VehicleService]
+    `
 })
 export class AppComponent {
     title:string = 'My First Angular 2 App';

@@ -1,0 +1,27 @@
+<section *ngIf="produit">
+    <section>
+        <h2>You selected:  {{produit.name}}  </h2>
+        <h3>Description</h3>
+        <p>
+            {{produit.name}}  price  {{produit.price}}.
+        </p>
+    </section>
+    <section>
+        <form (ngSubmit)="saveProduct()" #productForm="ngForm">
+            <div>
+                <label for="name">Name: </label>
+                <input type="text" name="name" required [(ngModel)]="produit.name" #name="ngModel">
+                <div [hidden]="name.valid || name.pristine" class="error">
+                    Name is required my good sir/lady!
+                </div>
+            </div>
+            <div>
+                <label for="price">Price: </label>
+                <input type="number" name="price" [(ngModel)]="produit.price">
+            </div>
+            <button type="submit" [disabled]="!productForm.form.valid">Save</button>
+        </form>
+    </section>
+    <! -- NEW BUTTON HERE! -->
+    <button (click)="goToProductList()">Back to product list</button>
+</section>

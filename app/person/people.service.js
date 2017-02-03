@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var http_1 = require('@angular/http');
-var Rx_1 = require('rxjs/Rx');
+var http_1 = require("@angular/http");
+var Rx_1 = require("rxjs/Rx");
 var PeopleService = (function () {
     function PeopleService(http) {
         this.http = http;
@@ -41,12 +41,12 @@ var PeopleService = (function () {
         headers.append('Accept', 'application/json');
         return headers;
     };
-    PeopleService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], PeopleService);
     return PeopleService;
 }());
+PeopleService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], PeopleService);
 exports.PeopleService = PeopleService;
 function mapPersons(response) {
     // uncomment to simulate error:

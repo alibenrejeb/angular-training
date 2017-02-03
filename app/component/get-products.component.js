@@ -9,35 +9,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var people_service_1 = require("../service/people.service");
-var GetPeopleComponent = (function () {
-    function GetPeopleComponent(peopleService) {
-        this.peopleService = peopleService;
+var product_service_1 = require("../service/product.service");
+var GetProductsComponent = (function () {
+    function GetProductsComponent(productService) {
+        this.productService = productService;
         this.error = "";
-        this.results = [];
+        this.products = [];
     }
-    GetPeopleComponent.prototype.ngOnInit = function () {
+    GetProductsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.peopleService
-            .getAll()
+        this.productService
+            .getProducts()
             .subscribe(function (response) {
-            _this.results = response;
+            _this.products = response;
             console.log(response);
         }, function (error) {
             _this.error = error;
             console.log(error);
         });
     };
-    return GetPeopleComponent;
+    return GetProductsComponent;
 }());
-GetPeopleComponent = __decorate([
+GetProductsComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'get-people',
-        templateUrl: 'get-people.component.html',
-        providers: [people_service_1.PeopleService]
+        selector: 'get-products',
+        templateUrl: 'get-products.component.html',
+        providers: [product_service_1.ProductService]
     }),
-    __metadata("design:paramtypes", [people_service_1.PeopleService])
-], GetPeopleComponent);
-exports.GetPeopleComponent = GetPeopleComponent;
-//# sourceMappingURL=get-peoples.component.js.map
+    __metadata("design:paramtypes", [product_service_1.ProductService])
+], GetProductsComponent);
+exports.GetProductsComponent = GetProductsComponent;
+//# sourceMappingURL=get-products.component.js.map
